@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+</head>
+<body>
+    <h1 class="title">Terrain Detection</h1>
+    <div class="uploadOuter">
+        <span class="dragBox" >
+            Darg and Drop image here
+        <form action="result" enctype="multipart/form-data" method="post">
+            <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  name="image"/>
+            <button type="Submit" name="save" >Submit</button>
+        </form>
+        </span>
+    </div>
+    <div id="preview" class="prev"></div>
+</body>
+</html>

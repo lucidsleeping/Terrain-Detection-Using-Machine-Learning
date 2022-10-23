@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  
+.uploadOuter {
+    text-align: center;
+    padding: 40px;
+}
+.uploadOuter strong {
+    padding: 0 10px;
+}
+.dragBox {
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    line-height: 95px;
+    color: rgb(0, 0, 0);
+    border: 2px dashed rgb(60, 58, 58);
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.dragBox input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.draging {
+    transform: scale(1.1);
+}
+#preview {
+    text-align: center;
+}
+#preview img {
+    border: 2px dashed rgb(5, 5, 5);
+    max-width: 40%;
+}
