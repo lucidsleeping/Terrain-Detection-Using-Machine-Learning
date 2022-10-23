@@ -12,6 +12,8 @@ UPLOAD_FOLDER = './uploads'
 app = Flask(__name__)
 app.config['IMAGE_UPLOADS'] = UPLOAD_FOLDER
 
+def mode(keywords):
+    modes = [[]]
 
 def detect(fname):
     filename= '.\\uploads\\'+fname
@@ -23,10 +25,11 @@ def detect(fname):
         final_image=np.expand_dims(resized_img,axis=0)
         final_image=tf.keras.applications.mobilenet.preprocess_input(final_image)
         pred=mobile.predict(final_image)
-        print(pred)
         result=imagenet_utils.decode_predictions(pred)
+        res = mode(result)
         return result
     except:
+        print('Error1')
         return -1
 
 
@@ -56,6 +59,7 @@ def uploadimg():
             else:
                 return redirect('/')
         except:
+            print('Error2')
             return redirect('/')
 
 
