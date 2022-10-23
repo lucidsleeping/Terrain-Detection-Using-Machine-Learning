@@ -5,3 +5,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.res{
+    margin-top: 20rem;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+}
