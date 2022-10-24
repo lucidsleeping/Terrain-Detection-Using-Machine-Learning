@@ -48,6 +48,7 @@ def detect(fname):
         final_image=tf.keras.applications.mobilenet.preprocess_input(final_image)
         pred=mobile.predict(final_image)
         result=imagenet_utils.decode_predictions(pred)
+        print(result)
         res = mode(result)
         print(res)
         return res
